@@ -31,6 +31,7 @@ const replaceTemplate = function(temp, product) {
     output = output.split('{%DESCRIPTION%}').join(product.description);
     output = output.split('{%ID%}').join(product.id);
 
+    console.log(product.organic);
     if(!product.organic){
         output = output.split('{%NOT_ORGANIC%}').join('not-organic');
     }
